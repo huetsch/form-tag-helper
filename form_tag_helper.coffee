@@ -3,7 +3,7 @@ TagHelper = require 'tag-helper'
 
 class FormTagHelper
   select_tag: (name, option_tags = null, options = {}) =>
-    html_name = if (options.multiple is true and new String(name).endsWith("[]")) then "#{name}[]" else name
+    html_name = if (options.multiple is true and (not new String(name).endsWith("[]"))) then "#{name}[]" else name
 
     if Object.delete(options, 'include_blank')
       option_tags = "<option value=\"\"></option>".html_safe().concat(option_tags)
