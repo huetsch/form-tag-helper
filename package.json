@@ -1,0 +1,16 @@
+{
+    "name": "form-tag-helper",
+    "description": "Rails' FormTagHelper ported to Javascript",
+    "keywords": [
+        "rails",
+        "form-tag-helper"
+    ],
+    "homepage": "https://github.com/huetsch/form-tag-helper",
+    "dependencies": {
+        "cream": ">= 0.0.21"
+    },
+    "main": "./form_tag_helper.js",
+    "version": "0.0.1",
+    "author": "Mark Huetsch <markhuetsch@gmail.com>",
+    "license": "MIT"
+}
