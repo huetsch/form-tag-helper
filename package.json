@@ -7,10 +7,10 @@
     ],
     "homepage": "https://github.com/huetsch/form-tag-helper",
     "dependencies": {
-        "cream": ">= 0.0.21"
+        "cream": ">= 0.0.22"
     },
     "main": "./form_tag_helper.js",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Mark Huetsch <markhuetsch@gmail.com>",
     "license": "MIT"
 }
