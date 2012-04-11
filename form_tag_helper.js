@@ -10,6 +10,7 @@
 
     function FormTagHelper() {
       this.sanitize_to_id = __bind(this.sanitize_to_id, this);
+      this.label_tag = __bind(this.label_tag, this);
       this.select_tag = __bind(this.select_tag, this);
     }
 
@@ -28,6 +29,20 @@
         name: html_name,
         id: this.sanitize_to_id(name)
       }, options));
+    };
+
+    FormTagHelper.prototype.label_tag = function(name, content_or_options, block) {
+      var options;
+      if (content_or_options == null) content_or_options = null;
+      if (block && Object.isPlainObject(content_or_options)) {
+        options = content_or_options;
+      } else {
+        options || (options = {});
+      }
+      if (!(name.trim().length === 0 || (options["for"] != null))) {
+        options["for"] = this.sanitize_to_id(name);
+      }
+      return TagHelper.content_tag('label', content_or_options || String(name).humanize(), options, block);
     };
 
     FormTagHelper.prototype.sanitize_to_id = function(name) {
